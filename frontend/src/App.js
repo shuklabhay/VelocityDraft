@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { createTheme, ThemeProvider } from "@mui/material";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
@@ -41,10 +41,8 @@ export default function App({ children }) {
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         {children}
       </LocalizationProvider>
-      ;
       <BrowserRouter>
         <AppBar />
-
         <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />

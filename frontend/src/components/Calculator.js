@@ -58,7 +58,6 @@ export default function Calculator() {
   function setChosenColleges(event, newSelectedColleges) {
     console.log(selectedColleges);
     setSelectedColleges(newSelectedColleges);
-    selectedColleges = newSelectedColleges; // removing this line might be necesarry later on if stuffs not adding up for this parameter
     console.log(selectedColleges);
   }
 
@@ -216,7 +215,7 @@ export default function Calculator() {
                 <Typography>
                   <Button
                     variant="contained"
-                    sx={{ marginTop: 1 }}
+                    sx={{ marginTop: 1, color: "white" }}
                     fullWidth
                     onClick={handleSubmit}
                   >
